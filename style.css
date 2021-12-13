@@ -23,12 +23,19 @@ html {
 body {
   font-family: "Red Hat Display";
   background-image: url(img/pattern-background-desktop.svg);
-  background-size: cover;
+  background-size: 500%;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(img/pattern-background-mobile.svg);
+    min-height: 100vh;
+  }
 }
 
 .card__bg {
@@ -38,11 +45,20 @@ body {
   border-radius: 15px;
 }
 
+@media screen and (max-width: 600px) {
+  .card__bg {
+    max-width: 90%;
+    height: 60rem;
+  }
+}
+
 .card__bg img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-top: -1.5rem;
+  width: 100%;
 }
+
 .card__content {
   display: flex;
   flex-direction: column;
@@ -54,6 +70,13 @@ body {
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--color-neutral-3);
+}
+
+@media screen and (max-width: 600px) {
+  .card__heading {
+    font-size: 2.5rem;
+  }
 }
 
 .card__text {
@@ -61,6 +84,14 @@ body {
   padding: 1rem 7rem;
   text-align: center;
   color: var(--color-neutral-2);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 600px) {
+  .card__text {
+    padding: 1rem 4rem;
+  }
 }
 
 .card__plan {
@@ -71,7 +102,7 @@ body {
   background-color: var(--color-neutral-1);
   padding: 2rem;
   border-radius: 10px;
-  margin: 3rem 0;
+  margin-bottom: 3rem;
 }
 
 .card__plan-info {
@@ -83,6 +114,12 @@ body {
   height: 100%;
   transform: translateY(1.25rem);
   margin-right: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card__plan-info {
+    margin-right: 1rem;
+  }
 }
 
 .card__plan a {
@@ -109,6 +146,12 @@ body {
 .card__plan-change {
   font-size: 1.4rem;
   font-weight: 900;
+  color: var(--color-primary-2);
+}
+
+.card__plan-change:hover {
+  color: #766cf1;
+  text-decoration: none;
 }
 
 .btn-big {
@@ -120,8 +163,18 @@ body {
   color: #fff;
   padding: 1.5rem 10rem;
   border-radius: 10px;
-  box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .btn-big {
+    padding: 1.5rem 8rem;
+  }
+}
+
+.btn-big:hover {
+  background-color: #766cf1;
 }
 
 .btn-small {
@@ -129,6 +182,10 @@ body {
   color: var(--color-neutral-2);
   text-decoration: none;
   font-weight: 900;
+}
+
+.btn-small:hover {
+  color: var(--color-neutral-3);
 }
 
 .attribution {
