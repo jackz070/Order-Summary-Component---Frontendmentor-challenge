@@ -1,3 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --color-primary-1: hsl(225, 100%, 94%);
+  --color-primary-2: hsl(245, 75%, 52%);
+
+  --color-neutral-1: hsl(225, 100%, 98%);
+  --color-neutral-2: hsl(224, 23%, 55%);
+  --color-neutral-3: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display";
+  background-image: url(img/pattern-background-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card__bg {
+  background-color: #fff;
+  height: 64rem;
+  width: 45rem;
+  border-radius: 15px;
+}
+
+.card__bg img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -1.5rem;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__heading {
+  margin-top: 3rem;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card__text {
+  font-size: 1.6rem;
+  padding: 1rem 7rem;
+  text-align: center;
+  color: var(--color-neutral-2);
+}
+
+.card__plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  background-color: var(--color-neutral-1);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 3rem 0;
+}
+
+.card__plan-info {
+  display: flex;
+}
+
+.card__plan-info img {
+  width: 100%;
+  height: 100%;
+  transform: translateY(1.25rem);
+  margin-right: 2rem;
+}
+
+.card__plan a {
+  display: block;
+}
+
+.card__plan-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__plan-type {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card__plan-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-neutral-2);
+}
+
+.card__plan-change {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.btn-big {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: inline-block;
+  background-color: var(--color-primary-2);
+  color: #fff;
+  padding: 1.5rem 10rem;
+  border-radius: 10px;
+  box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.btn-small {
+  font-size: 1.5rem;
+  color: var(--color-neutral-2);
+  text-decoration: none;
+  font-weight: 900;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
